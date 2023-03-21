@@ -9,7 +9,7 @@ pipeline {
     stage('stage 2') {
       steps {
         sh ''' if  if [ 'grep -c git /tmp/paquets' ne 0 ]
-        the 
+        then 
         dpkg -s git 
         else 
         sudo apt-get install -y git 
