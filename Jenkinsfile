@@ -6,9 +6,10 @@ pipeline {
         sh 'sudo apt-get -y update && sudo apt-get -y upgrade '
       }
     }
+
     stage('stage 2') {
       steps {
-        sh ''' if  if [ 'grep -c git /tmp/paquets' ne 0 ]
+        sh ''' if  [ \'grep -c git /tmp/paquets\' ne 0 ]
         then 
         dpkg -s git 
         else 
