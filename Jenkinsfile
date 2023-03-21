@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('stage 1') {
       steps {
-        sh 'sudo apt-get -y update && sudo apt-get -y upgrade é
+        sh 'sudo apt-get -y update && sudo apt-get -y upgrade '
       }
     }
     stage('stage 2') {
       steps {
-        sh ''' if  if [ 'grep -d git /tmp/paquets' ne 0 ]
+        sh ''' if  if [ 'grep -c git /tmp/paquets' ne 0 ]
         the 
         dpkg -s git 
         else 
